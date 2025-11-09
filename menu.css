@@ -1,0 +1,67 @@
+/* --- Menu Page Specific Styles --- */
+
+.menu-page-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 5%; /* Responsive padding */
+    text-align: center;
+}
+
+.menu-page-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* --- Category Filter Buttons --- */
+.category-filters {
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.filter-btn {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 22px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #ddd;
+}
+
+/* Style for the active filter button */
+.filter-btn.active {
+    background-color: #e63946; /* Main brand color */
+    color: #fff;
+}
+
+/* --- Menu Grid --- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 25px;
+}
+
+/* The 'article' styles from style.css will apply to .menu-item
+  if you link both stylesheets. 
+  
+  If you ONLY link menu.css, you would copy the 'article' styles
+  from style.css and paste them here, renaming 'article' to '.menu-item'.
+  
+  For this example, we assume you've linked 'style.css' first, 
+  so we just need to add the hide/show logic.
+*/
+
+/* This class will be added by JS to hide items */
+.menu-item.hide {
+    display: none;
+}

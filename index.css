@@ -1,0 +1,256 @@
+/* --- Basic Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* .mainbackground {
+    width: 100%;
+    height: 500px;
+}
+
+.background_image{
+     width: 100%;
+    height: 500px;
+    position: relative;
+} */
+
+
+/* --- Header & Navigation --- */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 5%; /* Use percentage for responsive padding */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a[href="index.html"] {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e63946; /* A food-app color */
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-left: 25px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding-bottom: 5px;
+    transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+nav li a:hover {
+    color: #e63946;
+    border-bottom: 2px solid #e63946;
+}
+
+/* --- Main Content --- */
+main {
+    display: block; 
+}
+
+/* --- Hero Section --- */
+main section:first-of-type {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.shutterstock.com/image-photo/mexican-food-table-scene-top-260nw-2344288141.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 100px; /* Reduced padding for hero */
+    text-align: center;
+}
+
+main section:first-of-type h1 {
+    font-size: 2.5rem; /* Responsive font size */
+    margin-bottom: 20px;
+}
+
+main section:first-of-type p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+main section:first-of-type a {
+    background-color: #e63946;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px; /* Softer corners */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+main section:first-of-type a:hover {
+    background-color: #d62828;
+    transform: scale(1.05);
+}
+
+/* --- Featured Dishes Section --- */
+main section:last-of-type {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 5%; /* Responsive padding */
+    text-align: center;
+}
+
+main section:last-of-type h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Grid layout for dish cards */
+main section:last-of-type > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 25px;
+}
+
+/* Card styling for each dish */
+article {
+    background-color: #fff;
+    border-radius: 12px; /* Softer corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+article > div {
+    padding: 20px;
+}
+
+article h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+article p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    min-height: 40px; /* Ensures cards align */
+}
+
+article div > div {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #008000;
+    margin-bottom: 15px;
+}
+
+article button {
+    background-color: #2a9d8f;
+    color: #fff;
+    border: none;
+    padding: 12px 15px; /* Taller button */
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+article button:hover {
+    background-color: #268c80;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+
+/* --- Toast Notification (for JS) --- */
+#toast-notification {
+    position: fixed;
+    bottom: -100px; /* Start off-screen */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #222;
+    color: #fff;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    font-weight: 500;
+    z-index: 1001;
+    transition: bottom 0.5s ease-in-out;
+}
+
+/* This class will be added/removed by JavaScript */
+#toast-notification.show {
+    bottom: 30px; /* Slide into view */
+}
+
+/* --- Media Query for Mobile --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    nav li {
+        margin-left: 10px; /* Tighter spacing */
+    }
+
+    main section:first-of-type {
+        padding: 60px 20px;
+    }
+
+    main section:first-of-type h1 {
+        font-size: 2rem;
+    }
+}
+
