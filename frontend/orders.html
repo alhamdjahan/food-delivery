@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - Online Food Ordering System</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="orders.css">
+</head>
+<body>
+
+    <!-- ======== HEADER & NAVIGATION (Same as other pages) ======== -->
+    <header>
+        <nav>
+            <a href="index.html">Foodie</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="orders.html">My Orders</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ======== ORDERS SECTION ======== -->
+        <section class="orders-page-section">
+            <h2>My Orders</h2>
+
+            <!-- --- Current Orders --- -->
+            <div class="order-category">
+                <h3>Current Orders</h3>
+                
+                <!-- Order 1 (Preparing) -->
+                <div class="order-card">
+                    <div class="order-header">
+                        <div>
+                            <span class="order-id">Order #10023</span>
+                            <span class="order-date">08 Nov 2025, 12:05 PM</span>
+                        </div>
+                        <span class="order-status preparing">Preparing</span>
+                    </div>
+                    <div class="order-body">
+                        <ul>
+                            <li>1 x Margherita Pizza</li>
+                            <li>2 x Fresh Lemonade</li>
+                        </ul>
+                        <div class="order-footer">
+                            <span class="order-total">Total: $19.50</span>
+                            <button class="track-btn" data-order-id="10023">Track Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order 2 (Out for Delivery) -->
+                <div class="order-card">
+                    <div class="order-header">
+                        <div>
+                            <span class="order-id">Order #10022</span>
+                            <span class="order-date">08 Nov 2025, 11:30 AM</span>
+                        </div>
+                        <span class="order-status out-for-delivery">Out for Delivery</span>
+                    </div>
+                    <div class="order-body">
+                        <ul>
+                            <li>1 x Classic Burger</li>
+                        </ul>
+                        <div class="order-footer">
+                            <span class="order-total">Total: $9.99</span>
+                            <button class="track-btn" data-order-id="10022">Track Order</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- --- Past Orders --- -->
+            <div class="order-category">
+                <h3>Past Orders</h3>
+
+                <!-- Order 3 (Delivered) -->
+                <div class="order-card">
+                    <div class="order-header">
+                        <div>
+                            <span class="order-id">Order #10015</span>
+                            <span class="order-date">05 Nov 2025, 7:30 PM</span>
+                        </div>
+                        <span class="order-status delivered">Delivered</span>
+                    </div>
+                    <div class="order-body">
+                        <ul>
+                            <li>2 x Pasta Carbonara</li>
+                            <li>1 x Caesar Salad</li>
+                        </ul>
+                        <div class="order-footer">
+                            <span class="order-total">Total: $35.99</span>
+                            <button class="track-btn disabled-btn" disabled>View Receipt</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <!-- ======== FOOTER (Same as other pages) ======== -->
+    <footer>
+        <p>Online Food Ordering System.</p>
+    </footer>
+
+    <!-- ======== ORDER TRACKING MODAL (Hidden by default) ======== -->
+    <div id="tracking-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-modal-btn" class="close-btn">&times;</button>
+            <h3>Order Status: #<span id="modal-order-id"></span></h3>
+            <ul class="tracking-steps">
+                <li class="step completed">
+                    <span class="step-icon">✔</span>
+                    <span class="step-label">Order Placed</span>
+                    <span class="step-time">11:30 AM</span>
+                </li>
+                <li class="step completed">
+                    <span class="step-icon">✔</span>
+                    <span class="step-label">Pending</span>
+                    <span class="step-time">11:31 AM</span>
+                </li>
+                <li class="step active">
+                    <span class="step-icon">►</span>
+                    <span class="step-label">Out for Delivery</span>
+                    <span class="step-time">11:45 AM</span>
+                </li>
+                <li class="step">
+                    <span class="step-icon"></span>
+                    <span class="step-label">Delivered</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Link to the new JavaScript file for the orders page -->
+    <script src="orders.js"></script>
+
+</body>
+
+</html>
+

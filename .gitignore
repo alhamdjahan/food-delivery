@@ -1,0 +1,15 @@
+# --- BACKEND SECRETS ---
+backend/.env
+
+# --- LOGS & TEMP FILES ---
+*.log
+*.tmp
+*.bak
+
+# --- SYSTEM FILES ---
+.DS_Store
+Thumbs.db
+
+# --- NODE / FRONTEND STUFF (if ever added) ---
+node_modules/
+dist/
